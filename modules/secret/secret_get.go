@@ -40,7 +40,6 @@ func (secret *Secret) Get(cmd *cobra.Command, args []string) (interface{}, error
 		if err != nil {
 			return nil, err
 		}
-
 		response, err := secret.ValidateURI(result.String())
 		if err != nil {
 			return nil, err

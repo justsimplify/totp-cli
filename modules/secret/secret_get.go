@@ -27,7 +27,6 @@ func (secret *Secret) Get(cmd *cobra.Command, args []string) (interface{}, error
 	if uri != "" && filePath != "" {
 		return nil, fmt.Errorf("only one of URI or File Path should be provided")
 	}
-
 	digits := viper.GetInt("digits")
 
 	if filePath != "" {

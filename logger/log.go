@@ -28,11 +28,9 @@ func Info(msg string) {
 // Error prints an error message to stderr in red
 func Error(err error) {
 	msg := fmt.Sprintf("%v", err)
-
 	if viper.GetBool("colorize") {
 		msg = color.New(color.FgRed).Sprint(msg)
 	}
-
 	_, _ = fmt.Fprintf(os.Stderr, "%+v\n", msg)
 }
 
